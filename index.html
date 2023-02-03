@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>wobot.ai</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="signin-text">
+            <p class="signin">
+                Sign In
+            </p>
+        </div>
+        <div class="form-container">
+            <div class="logo">
+                <img src="./assets/logo.png" alt="logo" class="logo">
+            </div>
+            <div class="signin-form">
+                <div class="form-logo">
+                    <img src="./assets/Solid_lines.png" class="form-logo">
+                </div>
+                <div class="form-heading">
+                    <p>Sign in to your account</p>
+                </div>
+                <form>
+                    <div class="name-field">
+                        <p class="form-text">Email/username</p>
+                        <input type="text" placeholder="e.g. john@example.com">
+                    </div>
+    
+                    <div class="image-field">
+                        <p class="form-text">Password</p>
+                        <input type="password" placeholder="e.g. ********" id="password">
+                        <i class="far fa-eye" id="togglePassword"></i>
+                    </div>
+                    <div class="form-btn">
+                        <button>Log In</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="create-account">
+                <p class="create-account-text">New Here? </p>
+                <a href="#" class="create-account-link">Create an account</a>
+            </div>
+            <div class="terms-policy">
+                Terms of Use | Privacy Policy
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+
+        togglePassword.addEventListener('click', function (e) {
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            this.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>
